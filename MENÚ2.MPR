@@ -1,0 +1,31 @@
+*       *********************************************************
+*       *                                                         
+*       * 11/23/05              MENÚ2.MPR               11:12:20  
+*       *                                                         
+*       *********************************************************
+*       *                                                         
+*       * Ing. Julio Añez                                         
+*       *                                                         
+*       * Copyright (C) 2005 CETRONIC S.R.L. - SERBILUZ           
+*       * Av. Delicias Esq. Calle 72                              
+*       * Maracaibo, Zulia  Código pos                               
+*       * Venezuela                                         
+*       *                                                         
+*       * Descripción:                                            
+*       * Este programa se generó automáticamente por GENMENU.    
+*       *                                                         
+*       *********************************************************
+
+
+*       *********************************************************
+*       *                                                         
+*       *                    Definición de menú                   
+*       *                                                         
+*       *********************************************************
+*
+
+SET SYSMENU TO
+SET SYSMENU AUTOMATIC
+
+DEFINE PAD _1o20o0mzm OF _MSYSMENU PROMPT "Cierre la ventana para ver el menu" COLOR SCHEME 3 ;
+	KEY ALT+C, ""

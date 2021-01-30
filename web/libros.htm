@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>
+Libros
+</title>
+<style>
+table {color: red; font-size: 12pt; font-family: Tahoma}
+</style>
+</head>
+<body bgcolor="pink">
+<h2>
+Libros
+</h2>
+<p>
+<table align=left cellspacing=3 cellpadding=3>
+  <tr>
+    <td><input type=button id=first value="  |<  "></td>
+    <td><input type=button id=backward value="  <  "></td>
+    <td><input type=button id=forward value="  >  "></td>
+    <td><input type=button id=end value="  >|  "></td>
+  </tr>
+</table>
+<br>
+<br>
+<hr>
+
+
+<object id="vfpData"
+classid="clsid:333C7BC4-460F-11D0-BC04-0080C7055A83"
+align="baseline" border="0" width="0" height="0"><param
+name="DataURL" value="libros.CSV"><param name="UseHeader"
+value="True"></object>
+
+
+<div>
+<strong>Registro: </strong>
+<label datasrc=#vfpData datafld=REGISTRO></label>
+<br>
+<strong>Titulo: </strong>
+<label datasrc=#vfpData datafld=TITULO></label>
+<br>
+<strong>Autor: </strong>
+<label datasrc=#vfpData datafld=AUTOR></label>
+<br>
+<strong>Codmat: </strong>
+<label datasrc=#vfpData datafld=CODMAT></label>
+</div>
+<script language=vbscript>
+
+Sub backward_onClick()
+  if vfpData.recordset.AbsolutePosition > 1 then
+    vfpData.recordset.movePrevious()
+  end if
+End Sub
+
+Sub forward_onClick()
+  if vfpData.recordset.AbsolutePosition <> vfpData.recordset.RecordCount then
+    vfpData.recordset.moveNext()
+  end if
+End Sub
+
+Sub first_onClick()
+    vfpData.recordset.moveFirst()
+End Sub
+
+Sub end_onClick()
+   vfpData.recordset.moveLast()
+End Sub
+
+</script>
+
+</body>
+</html>

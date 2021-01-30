@@ -1,0 +1,128 @@
+*       *********************************************************
+*       *                                                         
+*       * 17/10/01             VENTANA.SPR               21:34:10 
+*       *                                                         
+*       *********************************************************
+*       *                                                         
+*       * Nombre del autor                                        
+*       *                                                         
+*       * Copyright (c) 2001 Nombre de la empresa                 
+*       * Dirección                                               
+*       * Ciudad,     C.P.                                        
+*       * País                                              
+*       *                                                         
+*       * Description:                                            
+*       * Este programa lo ha generado automáticamente GENSCRN.    
+*       *                                                         
+*       *********************************************************
+
+
+#REGION 0
+REGIONAL m.currarea, m.talkstat, m.compstat
+
+IF SET("TALK") = "ON"
+	SET TALK OFF
+	m.talkstat = "ON"
+ELSE
+	m.talkstat = "OFF"
+ENDIF
+m.compstat = SET("COMPATIBLE")
+SET COMPATIBLE FOXPLUS
+
+m.rborder = SET("READBORDER")
+SET READBORDER ON
+
+m.currarea = SELECT()
+
+
+*       *********************************************************
+*       *                                                         
+*       *             Windows Definiciones de ventana             
+*       *                                                         
+*       *********************************************************
+*
+
+IF NOT WEXIST("_0i91a8bd8")
+	DEFINE WINDOW _0i91a8bd8 ;
+		AT  11.133, 17.500  ;
+		SIZE 7.700,60.875 ;
+		FONT "MS Sans Serif", 12 ;
+		NOFLOAT ;
+		NOCLOSE ;
+		NOMINIMIZE ;
+		SYSTEM ;
+		COLOR RGB(,,,0,255,255)
+	MOVE WINDOW _0i91a8bd8 CENTER
+ENDIF
+
+
+*       *********************************************************
+*       *                                                         
+*       *        VENTANA/Windows Distribución de pantalla         
+*       *                                                         
+*       *********************************************************
+*
+
+#REGION 1
+IF WVISIBLE("_0i91a8bd8")
+	ACTIVATE WINDOW _0i91a8bd8 SAME
+ELSE
+	ACTIVATE WINDOW _0i91a8bd8 NOSHOW
+ENDIF
+@ 1.250,4.250 SAY "                        ESPERE.......... REALIZANDO LA FACTURA" ;
+	FONT "MS Sans Serif", 8 ;
+	STYLE "T"
+@ 4.800,13.500 GET A ;
+	PICTURE "@*HN ACEPTAR" ;
+	SIZE 1.769,11.667,0.667 ;
+	DEFAULT 1 ;
+	FONT "MS Sans Serif", 8 ;
+	STYLE "B" ;
+	VALID _0i91a8bdy()
+@ 4.800,31.500 GET B ;
+	PICTURE "@*HT CANCELAR" ;
+	SIZE 1.769,13.000,0.667 ;
+	DEFAULT 1 ;
+	FONT "MS Sans Serif", 8 ;
+	STYLE "B"
+
+IF NOT WVISIBLE("_0i91a8bd8")
+	ACTIVATE WINDOW _0i91a8bd8
+ENDIF
+
+READ CYCLE
+
+RELEASE WINDOW _0i91a8bd8
+SELECT (m.currarea)
+
+
+#REGION 0
+
+SET READBORDER &rborder
+
+IF m.talkstat = "ON"
+	SET TALK ON
+ENDIF
+IF m.compstat = "ON"
+	SET COMPATIBLE ON
+ENDIF
+
+
+*       *********************************************************
+*       *                                                         
+*       * _0I91A8BDY           A VALID                            
+*       *                                                         
+*       * Function Origin:                                        
+*       *                                                         
+*       * From Platform:       Windows                            
+*       * From Screen:         VENTANA,     Record Number:    3   
+*       * Variable:            A                                  
+*       * Called By:           VALID Clause                       
+*       * Object Type:         Push Button                        
+*       * Snippet Number:      1                                  
+*       *                                                         
+*       *********************************************************
+*
+FUNCTION _0i91a8bdy     &&  A VALID
+#REGION 1
+DO IMPRIMIR

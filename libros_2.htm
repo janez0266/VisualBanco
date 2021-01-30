@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>
+Libros
+</title>
+</head>
+<body bgcolor="pink">
+
+<object id="vfpData"
+classid="clsid:333C7BC4-460F-11D0-BC04-0080C7055A83"
+align="baseline" border="0" width="0" height="0"><param
+name="DataURL" value="libros.CSV"><param name="UseHeader"
+value="True"></object>
+
+
+<div>
+<strong>Registro: </strong>
+<label datasrc=#vfpData datafld=REGISTRO></label>
+<br>
+<strong>Titulo: </strong>
+<label datasrc=#vfpData datafld=TITULO></label>
+<br>
+<strong>Autor: </strong>
+<label datasrc=#vfpData datafld=AUTOR></label>
+<br>
+<strong>Codmat: </strong>
+<label datasrc=#vfpData datafld=CODMAT></label>
+<br>
+<strong>Editorial: </strong>
+<label datasrc=#vfpData datafld=EDITORIAL></label>
+<br>
+<strong>Uso: </strong>
+<label datasrc=#vfpData datafld=USO></label>
+</div>
+<script language=vbscript>
+
+function DataFilter(vFilterValue)
+	vfpData.object.Filter = vfpData.recordset.Fields(0).Name & " = " & vFilterValue
+	vfpData.Reset()
+end function
+
+</script>
+
+</body>
+</html>

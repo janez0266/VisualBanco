@@ -1,0 +1,87 @@
+*       *********************************************************
+*       *                                                         
+*       * 12/01/05              OPERA.MPR               11:02:35  
+*       *                                                         
+*       *********************************************************
+*       *                                                         
+*       * Ing. Julio Añez                                         
+*       *                                                         
+*       * Copyright (C) 2005 CETRONIC S.R.L. - SERBILUZ           
+*       * Av. Delicias Esq. Calle 72                              
+*       * Maracaibo, Zulia  Código pos                               
+*       * Venezuela                                         
+*       *                                                         
+*       * Descripción:                                            
+*       * Este programa se generó automáticamente por GENMENU.    
+*       *                                                         
+*       *********************************************************
+
+
+*       *********************************************************
+*       *                                                         
+*       *                    Definición de menú                   
+*       *                                                         
+*       *********************************************************
+*
+
+SET SYSMENU TO
+SET SYSMENU AUTOMATIC
+
+DEFINE PAD _1oa0no3uq OF _MSYSMENU PROMPT "Ingresos" COLOR SCHEME 3 ;
+	KEY ALT+I, ""
+DEFINE PAD _1oa0no3ur OF _MSYSMENU PROMPT "Búsquedas" COLOR SCHEME 3 ;
+	KEY ALT+B, ""
+DEFINE PAD _1oa0no3us OF _MSYSMENU PROMPT "Utilidades" COLOR SCHEME 3 ;
+	KEY ALT+U, ""
+DEFINE PAD _1oa0no3ut OF _MSYSMENU PROMPT "SALIR" COLOR SCHEME 3 ;
+	KEY ALT+S, ""
+DEFINE PAD _1oa0no3uu OF _MSYSMENU PROMPT "Acerca de ..." COLOR SCHEME 3 ;
+	KEY ALT+A, ""
+ON PAD _1oa0no3uq OF _MSYSMENU ACTIVATE POPUP _0iq17rmxu
+ON PAD _1oa0no3ur OF _MSYSMENU ACTIVATE POPUP búsquedas
+ON PAD _1oa0no3us OF _MSYSMENU ACTIVATE POPUP utilidades
+ON SELECTION PAD _1oa0no3ut OF _MSYSMENU DO SALIR.PRG
+
+DEFINE POPUP _0iq17rmxu MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR 1 OF _0iq17rmxu PROMPT "Ingresos Varios"
+DEFINE BAR 2 OF _0iq17rmxu PROMPT "\-"
+DEFINE BAR 3 OF _0iq17rmxu PROMPT "Alquiler / Devolucion"
+DEFINE BAR 4 OF _0iq17rmxu PROMPT "\-"
+DEFINE BAR 5 OF _0iq17rmxu PROMPT "Deudas Paralizadas"
+ON SELECTION BAR 1 OF _0iq17rmxu ;
+	DO _1oa0no3uv ;
+	IN LOCFILE("\VISUAL BANCO\OPERA" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está OPERA?")
+ON SELECTION BAR 5 OF _0iq17rmxu do form deudas
+
+DEFINE POPUP búsquedas MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR 1 OF búsquedas PROMPT "Titulo"
+DEFINE BAR 2 OF búsquedas PROMPT "Autor"
+DEFINE BAR 3 OF búsquedas PROMPT "Codigo"
+DEFINE BAR 4 OF búsquedas PROMPT "\-"
+DEFINE BAR 5 OF búsquedas PROMPT "Datos Usuarios / Saldo"
+ON SELECTION BAR 1 OF búsquedas do form bustitulo
+ON SELECTION BAR 2 OF búsquedas do form busautor
+ON SELECTION BAR 3 OF búsquedas do form buscodigo
+
+DEFINE POPUP utilidades MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR _MST_DIARY OF utilidades PROMPT "Calendario"
+DEFINE BAR _MST_CALCU OF utilidades PROMPT "Calculadora"
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1OA0NO3UV  ON SELECTION BAR 1 OF POPUP _0iq17rmxu      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  OPERA.MPR,            Record:    5          
+*       * Called By:  ON SELECTION BAR 1 OF POPUP _0iq17rmxu      
+*       * Prompt:     Ingresos Varios                             
+*       * Snippet:    1                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1oa0no3uv
+select 15
+use '\visual banco\data\tempconta.dbf'
+DO FORM INGRESO

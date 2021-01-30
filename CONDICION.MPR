@@ -1,0 +1,133 @@
+*       *********************************************************
+*       *                                                         
+*       * 05/11/2001           CONDICION.MPR            23:13:25  
+*       *                                                         
+*       *********************************************************
+*       *                                                         
+*       * Ing. Julio Añez                                         
+*       *                                                         
+*       * Copyright (C) 2001 CETRONIC S.R.L.                      
+*       * Av. Delicias Esq. Calle 72                              
+*       * Maracaibo, Zulia  Código pos                               
+*       * Venezuela                                         
+*       *                                                         
+*       * Descripción:                                            
+*       * Este PROGRAMA lo ha generado automáticamente GENMENU.    
+*       *                                                         
+*       *********************************************************
+
+
+*       *********************************************************
+*       *                                                         
+*       *                    Definición de menú                   
+*       *                                                         
+*       *********************************************************
+*
+
+DEFINE POPUP menúcontex SHORTCUT RELATIVE FROM MROW(),MCOL()
+DEFINE BAR 1 OF menúcontex PROMPT "Estudiante"
+DEFINE BAR 2 OF menúcontex PROMPT "Profesor"
+DEFINE BAR 3 OF menúcontex PROMPT "Empleado"
+DEFINE BAR 4 OF menúcontex PROMPT "Postgrado"
+DEFINE BAR 5 OF menúcontex PROMPT "Otro"
+ON SELECTION BAR 1 OF menúcontex ;
+	DO _0is1drybc ;
+	IN LOCFILE("\VISUAL BANCO\CONDICION" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está CONDICION?")
+ON SELECTION BAR 2 OF menúcontex ;
+	DO _0is1drybe ;
+	IN LOCFILE("\VISUAL BANCO\CONDICION" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está CONDICION?")
+ON SELECTION BAR 3 OF menúcontex ;
+	DO _0is1drybf ;
+	IN LOCFILE("\VISUAL BANCO\CONDICION" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está CONDICION?")
+ON SELECTION BAR 4 OF menúcontex ;
+	DO _0is1drybh ;
+	IN LOCFILE("\VISUAL BANCO\CONDICION" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está CONDICION?")
+ON SELECTION BAR 5 OF menúcontex ;
+	DO _0is1drybi ;
+	IN LOCFILE("\VISUAL BANCO\CONDICION" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está CONDICION?")
+
+ACTIVATE POPUP menúcontex
+
+*       *********************************************************
+*       *                                                         
+*       * _0IS1DRYBC  ON SELECTION BAR 1 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  CONDICION.MPR,            Record:    5      
+*       * Called By:  ON SELECTION BAR 1 OF POPUP menúcontex      
+*       * Prompt:     Estudiante                                  
+*       * Snippet:    1                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _0is1drybc
+store 'EST' to xcondicion
+
+
+*       *********************************************************
+*       *                                                         
+*       * _0IS1DRYBE  ON SELECTION BAR 2 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  CONDICION.MPR,            Record:    6      
+*       * Called By:  ON SELECTION BAR 2 OF POPUP menúcontex      
+*       * Prompt:     Profesor                                    
+*       * Snippet:    2                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _0is1drybe
+store 'PRO' to xcondicion
+
+
+*       *********************************************************
+*       *                                                         
+*       * _0IS1DRYBF  ON SELECTION BAR 3 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  CONDICION.MPR,            Record:    7      
+*       * Called By:  ON SELECTION BAR 3 OF POPUP menúcontex      
+*       * Prompt:     Empleado                                    
+*       * Snippet:    3                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _0is1drybf
+store 'EMP' to xcondicion
+
+
+*       *********************************************************
+*       *                                                         
+*       * _0IS1DRYBH  ON SELECTION BAR 4 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  CONDICION.MPR,            Record:    8      
+*       * Called By:  ON SELECTION BAR 4 OF POPUP menúcontex      
+*       * Prompt:     Postgrado                                   
+*       * Snippet:    4                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _0is1drybh
+store 'POS' to xcondicion
+
+
+*       *********************************************************
+*       *                                                         
+*       * _0IS1DRYBI  ON SELECTION BAR 5 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  CONDICION.MPR,            Record:    9      
+*       * Called By:  ON SELECTION BAR 5 OF POPUP menúcontex      
+*       * Prompt:     Otro                                        
+*       * Snippet:    5                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _0is1drybi
+store 'OTR' to xcondicion

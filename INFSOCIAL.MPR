@@ -1,0 +1,70 @@
+*       *********************************************************
+*       *                                                         
+*       * 11/04/05            INFSOCIAL.MPR             16:43:10  
+*       *                                                         
+*       *********************************************************
+*       *                                                         
+*       * Ing. Julio Añez                                         
+*       *                                                         
+*       * Copyright (C) 2005 CETRONIC S.R.L. - SERBILUZ           
+*       * Av. Delicias Esq. Calle 72                              
+*       * Maracaibo, Zulia  Código pos                               
+*       * Venezuela                                         
+*       *                                                         
+*       * Descripción:                                            
+*       * Este programa se generó automáticamente por GENMENU.    
+*       *                                                         
+*       *********************************************************
+
+
+*       *********************************************************
+*       *                                                         
+*       *                    Definición de menú                   
+*       *                                                         
+*       *********************************************************
+*
+
+DEFINE POPUP menúcontex SHORTCUT RELATIVE FROM MROW(),MCOL()
+DEFINE BAR 1 OF menúcontex PROMPT "SI"
+DEFINE BAR 2 OF menúcontex PROMPT "NO"
+ON SELECTION BAR 1 OF menúcontex ;
+	DO _1nj0zu3ar ;
+	IN LOCFILE("\VISUAL BANCO\INFSOCIAL" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está INFSOCIAL?")
+ON SELECTION BAR 2 OF menúcontex ;
+	DO _1nj0zu3as ;
+	IN LOCFILE("\VISUAL BANCO\INFSOCIAL" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está INFSOCIAL?")
+
+ACTIVATE POPUP menúcontex
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3AR  ON SELECTION BAR 1 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  INFSOCIAL.MPR,            Record:    5      
+*       * Called By:  ON SELECTION BAR 1 OF POPUP menúcontex      
+*       * Prompt:     SI                                          
+*       * Snippet:    1                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3ar
+store 'SI' to xinfsocial
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3AS  ON SELECTION BAR 2 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  INFSOCIAL.MPR,            Record:    6      
+*       * Called By:  ON SELECTION BAR 2 OF POPUP menúcontex      
+*       * Prompt:     NO                                          
+*       * Snippet:    2                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3as
+store 'NO' to xinfsocial

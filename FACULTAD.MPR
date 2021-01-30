@@ -1,0 +1,289 @@
+*       *********************************************************
+*       *                                                         
+*       * 11/04/05            FACULTAD.MPR              16:43:10  
+*       *                                                         
+*       *********************************************************
+*       *                                                         
+*       * Ing. Julio Añez                                         
+*       *                                                         
+*       * Copyright (C) 2005 CETRONIC S.R.L. - SERBILUZ           
+*       * Av. Delicias Esq. Calle 72                              
+*       * Maracaibo, Zulia  Código pos                               
+*       * Venezuela                                         
+*       *                                                         
+*       * Descripción:                                            
+*       * Este programa se generó automáticamente por GENMENU.    
+*       *                                                         
+*       *********************************************************
+
+
+*       *********************************************************
+*       *                                                         
+*       *                    Definición de menú                   
+*       *                                                         
+*       *********************************************************
+*
+
+DEFINE POPUP menúcontex SHORTCUT RELATIVE FROM MROW(),MCOL()
+DEFINE BAR 1 OF menúcontex PROMPT "Agronomía"
+DEFINE BAR 2 OF menúcontex PROMPT "Arquitectura"
+DEFINE BAR 3 OF menúcontex PROMPT "Artes"
+DEFINE BAR 4 OF menúcontex PROMPT "Ciencias Económicas y Sociales"
+DEFINE BAR 5 OF menúcontex PROMPT "Ciencias Jurídicas y Políticas"
+DEFINE BAR 6 OF menúcontex PROMPT "Ciencias Veterinarias"
+DEFINE BAR 7 OF menúcontex PROMPT "Estudios Generales"
+DEFINE BAR 8 OF menúcontex PROMPT "Experimental de Ciencias"
+DEFINE BAR 9 OF menúcontex PROMPT "Humanidades"
+DEFINE BAR 10 OF menúcontex PROMPT "Ingenieria"
+DEFINE BAR 11 OF menúcontex PROMPT "Medicina"
+DEFINE BAR 12 OF menúcontex PROMPT "Odontología"
+ON SELECTION BAR 1 OF menúcontex ;
+	DO _1nj0zu354 ;
+	IN LOCFILE("\VISUAL BANCO\FACULTAD" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está FACULTAD?")
+ON SELECTION BAR 2 OF menúcontex ;
+	DO _1nj0zu355 ;
+	IN LOCFILE("\VISUAL BANCO\FACULTAD" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está FACULTAD?")
+ON SELECTION BAR 3 OF menúcontex ;
+	DO _1nj0zu356 ;
+	IN LOCFILE("\VISUAL BANCO\FACULTAD" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está FACULTAD?")
+ON SELECTION BAR 4 OF menúcontex ;
+	DO _1nj0zu357 ;
+	IN LOCFILE("\VISUAL BANCO\FACULTAD" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está FACULTAD?")
+ON SELECTION BAR 5 OF menúcontex ;
+	DO _1nj0zu358 ;
+	IN LOCFILE("\VISUAL BANCO\FACULTAD" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está FACULTAD?")
+ON SELECTION BAR 6 OF menúcontex ;
+	DO _1nj0zu359 ;
+	IN LOCFILE("\VISUAL BANCO\FACULTAD" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está FACULTAD?")
+ON SELECTION BAR 7 OF menúcontex ;
+	DO _1nj0zu35a ;
+	IN LOCFILE("\VISUAL BANCO\FACULTAD" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está FACULTAD?")
+ON SELECTION BAR 8 OF menúcontex ;
+	DO _1nj0zu35b ;
+	IN LOCFILE("\VISUAL BANCO\FACULTAD" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está FACULTAD?")
+ON SELECTION BAR 9 OF menúcontex ;
+	DO _1nj0zu35c ;
+	IN LOCFILE("\VISUAL BANCO\FACULTAD" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está FACULTAD?")
+ON SELECTION BAR 10 OF menúcontex ;
+	DO _1nj0zu35d ;
+	IN LOCFILE("\VISUAL BANCO\FACULTAD" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está FACULTAD?")
+ON SELECTION BAR 11 OF menúcontex ;
+	DO _1nj0zu35e ;
+	IN LOCFILE("\VISUAL BANCO\FACULTAD" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está FACULTAD?")
+ON SELECTION BAR 12 OF menúcontex ;
+	DO _1nj0zu35f ;
+	IN LOCFILE("\VISUAL BANCO\FACULTAD" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está FACULTAD?")
+
+ACTIVATE POPUP menúcontex
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU354  ON SELECTION BAR 1 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  FACULTAD.MPR,            Record:    5       
+*       * Called By:  ON SELECTION BAR 1 OF POPUP menúcontex      
+*       * Prompt:     Agronomía                                   
+*       * Snippet:    1                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu354
+store 'AG' to xfacultad
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU355  ON SELECTION BAR 2 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  FACULTAD.MPR,            Record:    6       
+*       * Called By:  ON SELECTION BAR 2 OF POPUP menúcontex      
+*       * Prompt:     Arquitectura                                
+*       * Snippet:    2                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu355
+store 'AR' to xfacultad
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU356  ON SELECTION BAR 3 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  FACULTAD.MPR,            Record:    7       
+*       * Called By:  ON SELECTION BAR 3 OF POPUP menúcontex      
+*       * Prompt:     Artes                                       
+*       * Snippet:    3                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu356
+store 'AT' to xfacultad
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU357  ON SELECTION BAR 4 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  FACULTAD.MPR,            Record:    8       
+*       * Called By:  ON SELECTION BAR 4 OF POPUP menúcontex      
+*       * Prompt:     Ciencias Económicas y Sociales              
+*       * Snippet:    4                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu357
+store 'CE' to xfacultad
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU358  ON SELECTION BAR 5 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  FACULTAD.MPR,            Record:    9       
+*       * Called By:  ON SELECTION BAR 5 OF POPUP menúcontex      
+*       * Prompt:     Ciencias Jurídicas y Políticas              
+*       * Snippet:    5                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu358
+store 'DE' to xfacultad
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU359  ON SELECTION BAR 6 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  FACULTAD.MPR,            Record:   10       
+*       * Called By:  ON SELECTION BAR 6 OF POPUP menúcontex      
+*       * Prompt:     Ciencias Veterinarias                       
+*       * Snippet:    6                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu359
+store 'VE' to xfacultad
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU35A  ON SELECTION BAR 7 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  FACULTAD.MPR,            Record:   11       
+*       * Called By:  ON SELECTION BAR 7 OF POPUP menúcontex      
+*       * Prompt:     Estudios Generales                          
+*       * Snippet:    7                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu35a
+store 'GE' to xfacultad
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU35B  ON SELECTION BAR 8 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  FACULTAD.MPR,            Record:   12       
+*       * Called By:  ON SELECTION BAR 8 OF POPUP menúcontex      
+*       * Prompt:     Experimental de Ciencias                    
+*       * Snippet:    8                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu35b
+store 'CI' to xfacultad
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU35C  ON SELECTION BAR 9 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  FACULTAD.MPR,            Record:   13       
+*       * Called By:  ON SELECTION BAR 9 OF POPUP menúcontex      
+*       * Prompt:     Humanidades                                 
+*       * Snippet:    9                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu35c
+store 'HU' to xfacultad
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU35D  ON SELECTION BAR 10 OF POPUP menúcontex     
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  FACULTAD.MPR,            Record:   14       
+*       * Called By:  ON SELECTION BAR 10 OF POPUP menúcontex     
+*       * Prompt:     Ingenieria                                  
+*       * Snippet:    10                                          
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu35d
+store 'IN' to xfacultad
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU35E  ON SELECTION BAR 11 OF POPUP menúcontex     
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  FACULTAD.MPR,            Record:   15       
+*       * Called By:  ON SELECTION BAR 11 OF POPUP menúcontex     
+*       * Prompt:     Medicina                                    
+*       * Snippet:    11                                          
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu35e
+store 'ME' to xfacultad
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU35F  ON SELECTION BAR 12 OF POPUP menúcontex     
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  FACULTAD.MPR,            Record:   16       
+*       * Called By:  ON SELECTION BAR 12 OF POPUP menúcontex     
+*       * Prompt:     Odontología                                 
+*       * Snippet:    12                                          
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu35f
+store 'OD' to xfacultad

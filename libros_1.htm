@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>
+Libros
+</title>
+</head>
+<body bgcolor="pink">
+<p>
+
+<object id="vfpData"
+classid="clsid:333C7BC4-460F-11D0-BC04-0080C7055A83"
+align="baseline" border="0" width="0" height="0"><param
+name="DataURL" value="libros.CSV"><param name="UseHeader"
+value="True"></object>
+
+
+<table id="tblvfpData" datasrc="#vfpData" datapagesize="10">
+<thead id="tblvfpdataheader">
+<tr>
+	<td><b><u><div id=registro>Registro</div></u></b></td>
+</tr>
+</thead>
+<tbody>
+<tr onclick="selectrecord(this)">
+	<td align=left><span datafld="registro"></span></td>
+</tr>
+</tbody>
+</table>
+<p>
+</p>
+<table align=left cellspacing=3 cellpadding=3>
+  <br>
+  <tr>
+    <td><input type=button id=prevpage value=" < " onclick="PagePrevious()"></td>
+    <td><input type=button id=nextpage value=" > " onclick="PageNext()"></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<hr>
+<script language=vbs>
+' Page methods for use with Tab Data Control
+
+Sub PagePrevious
+	 tblvfpData.previousPage()
+	nPageSize = 0 - ( tblvfpData.rows.length-1)
+	nCurrentPos =   vfpData.recordset.AbsolutePosition
+	if nCurrentPos+nPageSize > 0 then
+		vfpData.recordset.Move nPageSize
+	else
+		vfpData.recordset.MoveFirst
+	end if	
+	parent.Frames("Frame2").datafilter(vfpData.recordset.Fields(0).Value)
+End Sub
+
+Sub PageNext
+	 tblvfpData.nextPage()
+	nPageSize = tblvfpData.rows.length-1
+	nCurrentPos =  vfpData.recordset.AbsolutePosition
+	if nCurrentPos+nPageSize <  vfpData.recordset.RecordCount then
+		vfpData.recordset.Move nPageSize
+	else
+		vfpData.recordset.MoveLast
+	end if	
+	parent.Frames("Frame2").datafilter(vfpData.recordset.Fields(0).Value)
+End Sub
+
+</script>
+
+<script language=vbs>
+
+Dim cField
+Dim lSortAscend
+cField = ""
+lSortAscend = True
+
+Sub tblvfpdataheader_OnClick
+	Dim cID
+	cID = window.event.srcElement.ID
+	if cID = cField then
+		lSortAscend = Not lSortAscend
+	else
+		cField = cId
+		lSortAscend = true
+	end if
+	if lSortAscend = True then
+		vfpData.SortColumn = "+" & cField
+	else
+		vfpData.SortColumn = "-" & cField
+	end if
+	vfpData.Reset()
+	parent.Frames("Frame2").datafilter(vfpData.recordset.Fields(0).Value)
+End Sub
+
+</script>
+
+<script language=vbscript>
+
+Sub selectrecord(oTableRow)
+	vfpData.recordset.AbsolutePosition=oTableRow.RecordNumber
+	HilightTableRow("green")
+	parent.Frames("Frame2").datafilter(vfpData.recordset.Fields(0).Value)
+End sub
+
+Sub tblvfpData_onreadystatechange()
+	if tblvfpData.readyState = "complete" then
+		vfpData_onrowenter = HandleRowEnter()
+	end if
+End sub
+
+Function HandleRowEnter()
+	HilightTableRow("green")
+End function 
+
+Sub vfpData_onrowexit()
+	HilightTableRow("")
+End sub
+
+Sub HilightTableRow(cColor)
+	nRow = vfpData.recordset.AbsolutePosition
+	nPage = vfpData.recordset.AbsolutePage
+	nPageMax = tblvfpData.rows.length-1
+	nPageRows = tblvfpData.datapagesize
+	if nPageMax < 1 then
+		exit sub
+	end if
+	nRow = nRow MOD nPageRows
+	if nRow = 0 then
+		nRow = nPageMax
+	end if
+	if nRow > nPageRows then
+		nRow = 1
+	end if
+	tblvfpData.rows(nPageMax).style.backgroundColor = ""
+	tblvfpData.rows(nRow).style.backgroundColor = cColor
+End sub
+
+</script>
+
+</body>
+</html>

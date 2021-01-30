@@ -1,0 +1,133 @@
+*       *********************************************************
+*       *                                                         
+*       * 11/04/05           PROCEDENCIA.MPR            16:43:11  
+*       *                                                         
+*       *********************************************************
+*       *                                                         
+*       * Ing. Julio Añez                                         
+*       *                                                         
+*       * Copyright (C) 2005 CETRONIC S.R.L. - SERBILUZ           
+*       * Av. Delicias Esq. Calle 72                              
+*       * Maracaibo, Zulia  Código pos                               
+*       * Venezuela                                         
+*       *                                                         
+*       * Descripción:                                            
+*       * Este programa se generó automáticamente por GENMENU.    
+*       *                                                         
+*       *********************************************************
+
+
+*       *********************************************************
+*       *                                                         
+*       *                    Definición de menú                   
+*       *                                                         
+*       *********************************************************
+*
+
+DEFINE POPUP menúcontex SHORTCUT RELATIVE FROM MROW(),MCOL()
+DEFINE BAR 1 OF menúcontex PROMPT "Adquirido"
+DEFINE BAR 2 OF menúcontex PROMPT "Donado"
+DEFINE BAR 3 OF menúcontex PROMPT "Extraviado (Fuera de Servicio)"
+DEFINE BAR 4 OF menúcontex PROMPT "Renovado (Reemplazado por Nuevo)"
+DEFINE BAR 5 OF menúcontex PROMPT "Pago (Por otro Extraviado)"
+ON SELECTION BAR 1 OF menúcontex ;
+	DO _1nj0zu3v5 ;
+	IN LOCFILE("\VISUAL BANCO\PROCEDENCIA" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está PROCEDENCIA?")
+ON SELECTION BAR 2 OF menúcontex ;
+	DO _1nj0zu3v6 ;
+	IN LOCFILE("\VISUAL BANCO\PROCEDENCIA" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está PROCEDENCIA?")
+ON SELECTION BAR 3 OF menúcontex ;
+	DO _1nj0zu3v7 ;
+	IN LOCFILE("\VISUAL BANCO\PROCEDENCIA" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está PROCEDENCIA?")
+ON SELECTION BAR 4 OF menúcontex ;
+	DO _1nj0zu3v8 ;
+	IN LOCFILE("\VISUAL BANCO\PROCEDENCIA" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está PROCEDENCIA?")
+ON SELECTION BAR 5 OF menúcontex ;
+	DO _1nj0zu3v9 ;
+	IN LOCFILE("\VISUAL BANCO\PROCEDENCIA" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está PROCEDENCIA?")
+
+ACTIVATE POPUP menúcontex
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3V5  ON SELECTION BAR 1 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  PROCEDENCIA.MPR,            Record:    5    
+*       * Called By:  ON SELECTION BAR 1 OF POPUP menúcontex      
+*       * Prompt:     Adquirido                                   
+*       * Snippet:    1                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3v5
+STORE 'A' TO XINVENTA
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3V6  ON SELECTION BAR 2 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  PROCEDENCIA.MPR,            Record:    6    
+*       * Called By:  ON SELECTION BAR 2 OF POPUP menúcontex      
+*       * Prompt:     Donado                                      
+*       * Snippet:    2                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3v6
+STORE 'D' TO XINVENTA
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3V7  ON SELECTION BAR 3 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  PROCEDENCIA.MPR,            Record:    7    
+*       * Called By:  ON SELECTION BAR 3 OF POPUP menúcontex      
+*       * Prompt:     Extraviado (Fuera de Servicio)              
+*       * Snippet:    3                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3v7
+STORE 'E' TO XINVENTA
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3V8  ON SELECTION BAR 4 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  PROCEDENCIA.MPR,            Record:    8    
+*       * Called By:  ON SELECTION BAR 4 OF POPUP menúcontex      
+*       * Prompt:     Renovado (Reemplazado por Nuevo)            
+*       * Snippet:    4                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3v8
+STORE 'R' TO XINVENTA
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3V9  ON SELECTION BAR 5 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  PROCEDENCIA.MPR,            Record:    9    
+*       * Called By:  ON SELECTION BAR 5 OF POPUP menúcontex      
+*       * Prompt:     Pago (Por otro Extraviado)                  
+*       * Snippet:    5                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3v9
+STORE 'P' TO XINVENTA

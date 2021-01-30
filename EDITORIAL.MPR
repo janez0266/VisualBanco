@@ -1,0 +1,512 @@
+*       *********************************************************
+*       *                                                         
+*       * 11/04/05            EDITORIAL.MPR             16:43:11  
+*       *                                                         
+*       *********************************************************
+*       *                                                         
+*       * Ing. Julio Añez                                         
+*       *                                                         
+*       * Copyright (C) 2005 CETRONIC S.R.L. - SERBILUZ           
+*       * Av. Delicias Esq. Calle 72                              
+*       * Maracaibo, Zulia  Código pos                               
+*       * Venezuela                                         
+*       *                                                         
+*       * Descripción:                                            
+*       * Este programa se generó automáticamente por GENMENU.    
+*       *                                                         
+*       *********************************************************
+
+
+*       *********************************************************
+*       *                                                         
+*       *                    Definición de menú                   
+*       *                                                         
+*       *********************************************************
+*
+
+DEFINE POPUP menúcontex SHORTCUT RELATIVE FROM MROW(),MCOL()
+DEFINE BAR 1 OF menúcontex PROMPT "Alfaomega"
+DEFINE BAR 2 OF menúcontex PROMPT "Grijalbo"
+DEFINE BAR 3 OF menúcontex PROMPT "Emece"
+DEFINE BAR 4 OF menúcontex PROMPT "Ediar Venezolana S. R. L."
+DEFINE BAR 5 OF menúcontex PROMPT "Editorial de La Universidad del Zulia"
+DEFINE BAR 6 OF menúcontex PROMPT "Espasa-Caipe"
+DEFINE BAR 7 OF menúcontex PROMPT "Fundación Germán Sánchez"
+DEFINE BAR 8 OF menúcontex PROMPT "Gestion 2000 S. A."
+DEFINE BAR 9 OF menúcontex PROMPT "I.E.S.A."
+DEFINE BAR 10 OF menúcontex PROMPT "Legis"
+DEFINE BAR 11 OF menúcontex PROMPT "Librosca"
+DEFINE BAR 12 OF menúcontex PROMPT "Limosa"
+DEFINE BAR 13 OF menúcontex PROMPT "Lito-Jet"
+DEFINE BAR 14 OF menúcontex PROMPT "McGraw-Hill"
+DEFINE BAR 15 OF menúcontex PROMPT "Panamericana"
+DEFINE BAR 16 OF menúcontex PROMPT "Panorama"
+DEFINE BAR 17 OF menúcontex PROMPT "Paredes Editores"
+DEFINE BAR 18 OF menúcontex PROMPT "Pentice-Hall"
+DEFINE BAR 19 OF menúcontex PROMPT "Planeta"
+DEFINE BAR 20 OF menúcontex PROMPT "Plaza y James"
+DEFINE BAR 21 OF menúcontex PROMPT "Thomson"
+DEFINE BAR 22 OF menúcontex PROMPT "Trillas"
+ON SELECTION BAR 1 OF menúcontex ;
+	DO _1nj0zu3ro ;
+	IN LOCFILE("\VISUAL BANCO\EDITORIAL" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está EDITORIAL?")
+ON SELECTION BAR 2 OF menúcontex ;
+	DO _1nj0zu3rp ;
+	IN LOCFILE("\VISUAL BANCO\EDITORIAL" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está EDITORIAL?")
+ON SELECTION BAR 3 OF menúcontex ;
+	DO _1nj0zu3rq ;
+	IN LOCFILE("\VISUAL BANCO\EDITORIAL" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está EDITORIAL?")
+ON SELECTION BAR 4 OF menúcontex ;
+	DO _1nj0zu3rr ;
+	IN LOCFILE("\VISUAL BANCO\EDITORIAL" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está EDITORIAL?")
+ON SELECTION BAR 5 OF menúcontex ;
+	DO _1nj0zu3rs ;
+	IN LOCFILE("\VISUAL BANCO\EDITORIAL" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está EDITORIAL?")
+ON SELECTION BAR 6 OF menúcontex ;
+	DO _1nj0zu3rt ;
+	IN LOCFILE("\VISUAL BANCO\EDITORIAL" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está EDITORIAL?")
+ON SELECTION BAR 7 OF menúcontex ;
+	DO _1nj0zu3ru ;
+	IN LOCFILE("\VISUAL BANCO\EDITORIAL" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está EDITORIAL?")
+ON SELECTION BAR 8 OF menúcontex ;
+	DO _1nj0zu3rv ;
+	IN LOCFILE("\VISUAL BANCO\EDITORIAL" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está EDITORIAL?")
+ON SELECTION BAR 9 OF menúcontex ;
+	DO _1nj0zu3rw ;
+	IN LOCFILE("\VISUAL BANCO\EDITORIAL" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está EDITORIAL?")
+ON SELECTION BAR 10 OF menúcontex ;
+	DO _1nj0zu3rx ;
+	IN LOCFILE("\VISUAL BANCO\EDITORIAL" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está EDITORIAL?")
+ON SELECTION BAR 11 OF menúcontex ;
+	DO _1nj0zu3ry ;
+	IN LOCFILE("\VISUAL BANCO\EDITORIAL" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está EDITORIAL?")
+ON SELECTION BAR 12 OF menúcontex ;
+	DO _1nj0zu3rz ;
+	IN LOCFILE("\VISUAL BANCO\EDITORIAL" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está EDITORIAL?")
+ON SELECTION BAR 13 OF menúcontex ;
+	DO _1nj0zu3s4 ;
+	IN LOCFILE("\VISUAL BANCO\EDITORIAL" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está EDITORIAL?")
+ON SELECTION BAR 14 OF menúcontex ;
+	DO _1nj0zu3s5 ;
+	IN LOCFILE("\VISUAL BANCO\EDITORIAL" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está EDITORIAL?")
+ON SELECTION BAR 15 OF menúcontex ;
+	DO _1nj0zu3s6 ;
+	IN LOCFILE("\VISUAL BANCO\EDITORIAL" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está EDITORIAL?")
+ON SELECTION BAR 16 OF menúcontex ;
+	DO _1nj0zu3s7 ;
+	IN LOCFILE("\VISUAL BANCO\EDITORIAL" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está EDITORIAL?")
+ON SELECTION BAR 17 OF menúcontex ;
+	DO _1nj0zu3s8 ;
+	IN LOCFILE("\VISUAL BANCO\EDITORIAL" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está EDITORIAL?")
+ON SELECTION BAR 18 OF menúcontex ;
+	DO _1nj0zu3s9 ;
+	IN LOCFILE("\VISUAL BANCO\EDITORIAL" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está EDITORIAL?")
+ON SELECTION BAR 19 OF menúcontex ;
+	DO _1nj0zu3sa ;
+	IN LOCFILE("\VISUAL BANCO\EDITORIAL" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está EDITORIAL?")
+ON SELECTION BAR 20 OF menúcontex ;
+	DO _1nj0zu3sb ;
+	IN LOCFILE("\VISUAL BANCO\EDITORIAL" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está EDITORIAL?")
+ON SELECTION BAR 21 OF menúcontex ;
+	DO _1nj0zu3sc ;
+	IN LOCFILE("\VISUAL BANCO\EDITORIAL" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está EDITORIAL?")
+ON SELECTION BAR 22 OF menúcontex ;
+	DO _1nj0zu3sd ;
+	IN LOCFILE("\VISUAL BANCO\EDITORIAL" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está EDITORIAL?")
+
+ACTIVATE POPUP menúcontex
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3RO  ON SELECTION BAR 1 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  EDITORIAL.MPR,            Record:    5      
+*       * Called By:  ON SELECTION BAR 1 OF POPUP menúcontex      
+*       * Prompt:     Alfaomega                                   
+*       * Snippet:    1                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3ro
+store 'ALFAOMEGA' TO XEDITORIAL
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3RP  ON SELECTION BAR 2 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  EDITORIAL.MPR,            Record:    6      
+*       * Called By:  ON SELECTION BAR 2 OF POPUP menúcontex      
+*       * Prompt:     Grijalbo                                    
+*       * Snippet:    2                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3rp
+STORE 'GRIJALBO' TO XEDITORIAL
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3RQ  ON SELECTION BAR 3 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  EDITORIAL.MPR,            Record:    7      
+*       * Called By:  ON SELECTION BAR 3 OF POPUP menúcontex      
+*       * Prompt:     Emece                                       
+*       * Snippet:    3                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3rq
+STORE 'EMECE' TO XEDITORIAL
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3RR  ON SELECTION BAR 4 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  EDITORIAL.MPR,            Record:    8      
+*       * Called By:  ON SELECTION BAR 4 OF POPUP menúcontex      
+*       * Prompt:     Ediar Venezolana S. R. L.                   
+*       * Snippet:    4                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3rr
+STORE 'EDIAR VENEZOLANA S.R.L.' TO XEDITORIAL
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3RS  ON SELECTION BAR 5 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  EDITORIAL.MPR,            Record:    9      
+*       * Called By:  ON SELECTION BAR 5 OF POPUP menúcontex      
+*       * Prompt:     Editorial de La Universidad del Zulia       
+*       * Snippet:    5                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3rs
+STORE 'EDILUZ' TO XEDITORIAL
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3RT  ON SELECTION BAR 6 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  EDITORIAL.MPR,            Record:   10      
+*       * Called By:  ON SELECTION BAR 6 OF POPUP menúcontex      
+*       * Prompt:     Espasa-Caipe                                
+*       * Snippet:    6                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3rt
+STORE 'ESPASA-CAIPE' TO XEDITORIAL
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3RU  ON SELECTION BAR 7 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  EDITORIAL.MPR,            Record:   11      
+*       * Called By:  ON SELECTION BAR 7 OF POPUP menúcontex      
+*       * Prompt:     Fundación Germán Sánchez                    
+*       * Snippet:    7                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3ru
+STORE 'FUNDACION GERMAN SANCHEZ' TO XEDITORIAL
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3RV  ON SELECTION BAR 8 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  EDITORIAL.MPR,            Record:   12      
+*       * Called By:  ON SELECTION BAR 8 OF POPUP menúcontex      
+*       * Prompt:     Gestion 2000 S. A.                          
+*       * Snippet:    8                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3rv
+STORE 'GESTION 2000 S.A.' TO XEDITORIAL
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3RW  ON SELECTION BAR 9 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  EDITORIAL.MPR,            Record:   13      
+*       * Called By:  ON SELECTION BAR 9 OF POPUP menúcontex      
+*       * Prompt:     I.E.S.A.                                    
+*       * Snippet:    9                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3rw
+STORE 'I.E.S.A.' TO XEDITORIAL
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3RX  ON SELECTION BAR 10 OF POPUP menúcontex     
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  EDITORIAL.MPR,            Record:   14      
+*       * Called By:  ON SELECTION BAR 10 OF POPUP menúcontex     
+*       * Prompt:     Legis                                       
+*       * Snippet:    10                                          
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3rx
+STORE 'LEGIS' TO XEDITORIAL
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3RY  ON SELECTION BAR 11 OF POPUP menúcontex     
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  EDITORIAL.MPR,            Record:   15      
+*       * Called By:  ON SELECTION BAR 11 OF POPUP menúcontex     
+*       * Prompt:     Librosca                                    
+*       * Snippet:    11                                          
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3ry
+STORE 'LIBROSCA' TO XEDITORIAL
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3RZ  ON SELECTION BAR 12 OF POPUP menúcontex     
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  EDITORIAL.MPR,            Record:   16      
+*       * Called By:  ON SELECTION BAR 12 OF POPUP menúcontex     
+*       * Prompt:     Limosa                                      
+*       * Snippet:    12                                          
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3rz
+STORE 'LIMOSA' TO XEDITORIAL
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3S4  ON SELECTION BAR 13 OF POPUP menúcontex     
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  EDITORIAL.MPR,            Record:   17      
+*       * Called By:  ON SELECTION BAR 13 OF POPUP menúcontex     
+*       * Prompt:     Lito-Jet                                    
+*       * Snippet:    13                                          
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3s4
+STORE 'LITO-JET' TO XEDITORIAL
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3S5  ON SELECTION BAR 14 OF POPUP menúcontex     
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  EDITORIAL.MPR,            Record:   18      
+*       * Called By:  ON SELECTION BAR 14 OF POPUP menúcontex     
+*       * Prompt:     McGraw-Hill                                 
+*       * Snippet:    14                                          
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3s5
+STORE 'MCGRAW-HILL' TO XEDITORIAL
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3S6  ON SELECTION BAR 15 OF POPUP menúcontex     
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  EDITORIAL.MPR,            Record:   19      
+*       * Called By:  ON SELECTION BAR 15 OF POPUP menúcontex     
+*       * Prompt:     Panamericana                                
+*       * Snippet:    15                                          
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3s6
+STORE 'PANAMERICANA' TO XEDITORIAL
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3S7  ON SELECTION BAR 16 OF POPUP menúcontex     
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  EDITORIAL.MPR,            Record:   20      
+*       * Called By:  ON SELECTION BAR 16 OF POPUP menúcontex     
+*       * Prompt:     Panorama                                    
+*       * Snippet:    16                                          
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3s7
+STORE 'PANORAMA' TO XEDITORIAL
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3S8  ON SELECTION BAR 17 OF POPUP menúcontex     
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  EDITORIAL.MPR,            Record:   21      
+*       * Called By:  ON SELECTION BAR 17 OF POPUP menúcontex     
+*       * Prompt:     Paredes Editores                            
+*       * Snippet:    17                                          
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3s8
+STORE 'PAREDES EDITORES' TO XEDITORIAL
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3S9  ON SELECTION BAR 18 OF POPUP menúcontex     
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  EDITORIAL.MPR,            Record:   22      
+*       * Called By:  ON SELECTION BAR 18 OF POPUP menúcontex     
+*       * Prompt:     Pentice-Hall                                
+*       * Snippet:    18                                          
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3s9
+STORE 'PENTICE-HALL' TO XEDITORIAL
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3SA  ON SELECTION BAR 19 OF POPUP menúcontex     
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  EDITORIAL.MPR,            Record:   23      
+*       * Called By:  ON SELECTION BAR 19 OF POPUP menúcontex     
+*       * Prompt:     Planeta                                     
+*       * Snippet:    19                                          
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3sa
+STORE 'PLANETA' TO XEDITORIAL
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3SB  ON SELECTION BAR 20 OF POPUP menúcontex     
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  EDITORIAL.MPR,            Record:   24      
+*       * Called By:  ON SELECTION BAR 20 OF POPUP menúcontex     
+*       * Prompt:     Plaza y James                               
+*       * Snippet:    20                                          
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3sb
+STORE 'PLAZA Y JAMES' TO XEDITORIAL
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3SC  ON SELECTION BAR 21 OF POPUP menúcontex     
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  EDITORIAL.MPR,            Record:   25      
+*       * Called By:  ON SELECTION BAR 21 OF POPUP menúcontex     
+*       * Prompt:     Thomson                                     
+*       * Snippet:    21                                          
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3sc
+STORE 'THOMPSON' TO XEDITORIAL
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3SD  ON SELECTION BAR 22 OF POPUP menúcontex     
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  EDITORIAL.MPR,            Record:   26      
+*       * Called By:  ON SELECTION BAR 22 OF POPUP menúcontex     
+*       * Prompt:     Trillas                                     
+*       * Snippet:    22                                          
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3sd
+STORE 'TRILLAS' TO XEDITORIAL
+

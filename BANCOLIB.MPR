@@ -1,0 +1,112 @@
+*       *********************************************************
+*       *                                                         
+*       * 11/04/05            BANCOLIB.MPR              16:43:10  
+*       *                                                         
+*       *********************************************************
+*       *                                                         
+*       * Ing. Julio Añez                                         
+*       *                                                         
+*       * Copyright (C) 2005 CETRONIC S.R.L. - SERBILUZ           
+*       * Av. Delicias Esq. Calle 72                              
+*       * Maracaibo, Zulia  Código pos                               
+*       * Venezuela                                         
+*       *                                                         
+*       * Descripción:                                            
+*       * Este programa se generó automáticamente por GENMENU.    
+*       *                                                         
+*       *********************************************************
+
+
+*       *********************************************************
+*       *                                                         
+*       *                    Definición de menú                   
+*       *                                                         
+*       *********************************************************
+*
+
+DEFINE POPUP menúcontex SHORTCUT RELATIVE FROM MROW(),MCOL()
+DEFINE BAR 1 OF menúcontex PROMPT "Humanístico - Agropecuario"
+DEFINE BAR 2 OF menúcontex PROMPT "Científico - Técnico"
+DEFINE BAR 3 OF menúcontex PROMPT "Cabimas"
+DEFINE BAR 4 OF menúcontex PROMPT "Punto Fijo"
+ON SELECTION BAR 1 OF menúcontex ;
+	DO _1nj0zu3cx ;
+	IN LOCFILE("\VISUAL BANCO\BANCOLIB" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está BANCOLIB?")
+ON SELECTION BAR 2 OF menúcontex ;
+	DO _1nj0zu3dd ;
+	IN LOCFILE("\VISUAL BANCO\BANCOLIB" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está BANCOLIB?")
+ON SELECTION BAR 3 OF menúcontex ;
+	DO _1nj0zu3de ;
+	IN LOCFILE("\VISUAL BANCO\BANCOLIB" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está BANCOLIB?")
+ON SELECTION BAR 4 OF menúcontex ;
+	DO _1nj0zu3df ;
+	IN LOCFILE("\VISUAL BANCO\BANCOLIB" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está BANCOLIB?")
+
+ACTIVATE POPUP menúcontex
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3CX  ON SELECTION BAR 1 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  BANCOLIB.MPR,            Record:    5       
+*       * Called By:  ON SELECTION BAR 1 OF POPUP menúcontex      
+*       * Prompt:     Humanístico - Agropecuario                  
+*       * Snippet:    1                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3cx
+store 'HA' to xbancolib
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3DD  ON SELECTION BAR 2 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  BANCOLIB.MPR,            Record:    6       
+*       * Called By:  ON SELECTION BAR 2 OF POPUP menúcontex      
+*       * Prompt:     Científico - Técnico                        
+*       * Snippet:    2                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3dd
+store 'CT' to xbancolib
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3DE  ON SELECTION BAR 3 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  BANCOLIB.MPR,            Record:    7       
+*       * Called By:  ON SELECTION BAR 3 OF POPUP menúcontex      
+*       * Prompt:     Cabimas                                     
+*       * Snippet:    3                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3de
+store 'CA' to xbancolib
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1NJ0ZU3DF  ON SELECTION BAR 4 OF POPUP menúcontex      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  BANCOLIB.MPR,            Record:    8       
+*       * Called By:  ON SELECTION BAR 4 OF POPUP menúcontex      
+*       * Prompt:     Punto Fijo                                  
+*       * Snippet:    4                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1nj0zu3df
+store 'PF' to xbancolib

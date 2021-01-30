@@ -1,0 +1,5 @@
+*- [CONVERTER] Declarar variables para punteros de registroPUBLIC _iconvBiblio3GoToPlaceHolder
+
+EXTERNAL PROC verlista.scx
+
+DO FORM "verlista.scx" NAME _0J01B4G6X LINKED 

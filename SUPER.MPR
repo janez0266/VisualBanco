@@ -1,0 +1,343 @@
+*       *********************************************************
+*       *                                                         
+*       * 11/23/05              SUPER.MPR               16:18:38  
+*       *                                                         
+*       *********************************************************
+*       *                                                         
+*       * Ing. Julio Añez                                         
+*       *                                                         
+*       * Copyright (C) 2005 CETRONIC S.R.L. - SERBILUZ           
+*       * Av. Delicias Esq. Calle 72                              
+*       * Maracaibo, Zulia  Código pos                               
+*       * Venezuela                                         
+*       *                                                         
+*       * Descripción:                                            
+*       * Este programa se generó automáticamente por GENMENU.    
+*       *                                                         
+*       *********************************************************
+
+
+*       *********************************************************
+*       *                                                         
+*       *                    Definición de menú                   
+*       *                                                         
+*       *********************************************************
+*
+
+SET SYSMENU TO
+SET SYSMENU AUTOMATIC
+
+DEFINE PAD _1o20yyjai OF _MSYSMENU PROMPT "\<Ingresos" COLOR SCHEME 3 ;
+	KEY ALT+I, ""
+DEFINE PAD _1o20yyjaj OF _MSYSMENU PROMPT "\<Búsquedas" COLOR SCHEME 3 ;
+	KEY ALT+B, ""
+DEFINE PAD _1o20yyjak OF _MSYSMENU PROMPT "\<Listados/Reportes" COLOR SCHEME 3 ;
+	KEY ALT+L, ""
+DEFINE PAD _1o20yyjal OF _MSYSMENU PROMPT "\<Estadísticas" COLOR SCHEME 3 ;
+	KEY ALT+E, ""
+DEFINE PAD _1o20yyjam OF _MSYSMENU PROMPT "\<Mantenimiento" COLOR SCHEME 3 ;
+	KEY ALT+M, ""
+DEFINE PAD _1o20yyjan OF _MSYSMENU PROMPT "\<Utilidades" COLOR SCHEME 3 ;
+	KEY ALT+U, ""
+DEFINE PAD _1o20yyjao OF _MSYSMENU PROMPT "\<SALIR" COLOR SCHEME 3 ;
+	KEY ALT+S, ""
+DEFINE PAD _1o20yyjap OF _MSYSMENU PROMPT "\<Acerca de ..." COLOR SCHEME 3 ;
+	KEY ALT+A, ""
+ON PAD _1o20yyjai OF _MSYSMENU ACTIVATE POPUP ingresos
+ON PAD _1o20yyjaj OF _MSYSMENU ACTIVATE POPUP búsquedas
+ON PAD _1o20yyjak OF _MSYSMENU ACTIVATE POPUP listadosre
+ON PAD _1o20yyjal OF _MSYSMENU ACTIVATE POPUP estadístic
+ON PAD _1o20yyjam OF _MSYSMENU ACTIVATE POPUP mantenimie
+ON PAD _1o20yyjan OF _MSYSMENU ACTIVATE POPUP utilidades
+ON SELECTION PAD _1o20yyjao OF _MSYSMENU DO SALIR.PRG
+
+DEFINE POPUP ingresos MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR 1 OF ingresos PROMPT "Alquiler / Devolucion"
+DEFINE BAR 2 OF ingresos PROMPT "\-"
+DEFINE BAR 3 OF ingresos PROMPT "Ingresos Varios"
+DEFINE BAR 4 OF ingresos PROMPT "\-"
+DEFINE BAR 5 OF ingresos PROMPT "Deudas Paralizadas"
+ON SELECTION BAR 1 OF ingresos do form alquila
+ON SELECTION BAR 3 OF ingresos ;
+	DO _1o20yyjaq ;
+	IN LOCFILE("\VISUAL BANCO\SUPER" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está SUPER?")
+ON SELECTION BAR 5 OF ingresos do form deudas
+
+DEFINE POPUP búsquedas MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR 1 OF búsquedas PROMPT "Titulo"
+DEFINE BAR 2 OF búsquedas PROMPT "Autor"
+DEFINE BAR 3 OF búsquedas PROMPT "Codigo"
+DEFINE BAR 4 OF búsquedas PROMPT "\-"
+DEFINE BAR 5 OF búsquedas PROMPT "Datos Usuarios / Saldo"
+ON SELECTION BAR 1 OF búsquedas do form bustitulo
+ON SELECTION BAR 2 OF búsquedas do form busautor
+ON SELECTION BAR 3 OF búsquedas do form buscodigo
+ON SELECTION BAR 5 OF búsquedas do saldo.PRG
+
+DEFINE POPUP listadosre MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR 1 OF listadosre PROMPT "libros"
+DEFINE BAR 2 OF listadosre PROMPT "Usuarios del Banco"
+DEFINE BAR 3 OF listadosre PROMPT "\-"
+DEFINE BAR 4 OF listadosre PROMPT "Contabilidad"
+DEFINE BAR 5 OF listadosre PROMPT "Carnets"
+DEFINE BAR 6 OF listadosre PROMPT "Solvencias"
+ON SELECTION BAR 1 OF listadosre do form listadoslib
+ON SELECTION BAR 2 OF listadosre do form listados
+ON SELECTION BAR 4 OF listadosre do form contabilidad
+ON SELECTION BAR 5 OF listadosre do form carnets
+
+DEFINE POPUP estadístic MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR 1 OF estadístic PROMPT "Ingresos"
+DEFINE BAR 2 OF estadístic PROMPT "Movimientos"
+DEFINE BAR 3 OF estadístic PROMPT "Morosos"
+DEFINE BAR 4 OF estadístic PROMPT "Retirados"
+DEFINE BAR 5 OF estadístic PROMPT "Consultas"
+DEFINE BAR 6 OF estadístic PROMPT "Usuarios Inscritos"
+DEFINE BAR 7 OF estadístic PROMPT "Libros"
+ON SELECTION BAR 1 OF estadístic DO GRAFICO.PRG
+ON SELECTION BAR 2 OF estadístic ;
+	DO _1o20yyjax ;
+	IN LOCFILE("\VISUAL BANCO\SUPER" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está SUPER?")
+ON SELECTION BAR 3 OF estadístic ;
+	DO _1o20yyjay ;
+	IN LOCFILE("\VISUAL BANCO\SUPER" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está SUPER?")
+ON SELECTION BAR 4 OF estadístic ;
+	DO _1o20yyjaz ;
+	IN LOCFILE("\VISUAL BANCO\SUPER" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está SUPER?")
+ON SELECTION BAR 5 OF estadístic ;
+	DO _1o20yyjb0 ;
+	IN LOCFILE("\VISUAL BANCO\SUPER" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está SUPER?")
+ON SELECTION BAR 6 OF estadístic ;
+	DO _1o20yyjb1 ;
+	IN LOCFILE("\VISUAL BANCO\SUPER" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está SUPER?")
+ON SELECTION BAR 7 OF estadístic ;
+	DO _1o20yyjb2 ;
+	IN LOCFILE("\VISUAL BANCO\SUPER" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está SUPER?")
+
+DEFINE POPUP mantenimie MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR 1 OF mantenimie PROMPT "Usuarios"
+DEFINE BAR 2 OF mantenimie PROMPT "Libros"
+DEFINE BAR 3 OF mantenimie PROMPT "Facultades"
+DEFINE BAR 4 OF mantenimie PROMPT "\-"
+DEFINE BAR 5 OF mantenimie PROMPT "Facturas"
+DEFINE BAR 6 OF mantenimie PROMPT "Suspensiones temporales"
+DEFINE BAR 7 OF mantenimie PROMPT "Fechas no hábiles"
+DEFINE BAR 8 OF mantenimie PROMPT "\-"
+DEFINE BAR 9 OF mantenimie PROMPT "Reindexar B.D."
+DEFINE BAR 10 OF mantenimie PROMPT "Respaldos"
+DEFINE BAR 11 OF mantenimie PROMPT "\-"
+DEFINE BAR 12 OF mantenimie PROMPT "Configuración"
+ON SELECTION BAR 1 OF mantenimie do form usuarios
+ON SELECTION BAR 2 OF mantenimie do form libros
+ON SELECTION BAR 3 OF mantenimie do form facultad
+ON BAR 5 OF mantenimie ACTIVATE POPUP revisarfac
+ON SELECTION BAR 6 OF mantenimie do form problema
+ON SELECTION BAR 7 OF mantenimie do form nohabil
+ON SELECTION BAR 9 OF mantenimie DO form REINDEX
+ON SELECTION BAR 10 OF mantenimie do form respaldos
+ON SELECTION BAR 12 OF mantenimie do form config
+
+DEFINE POPUP revisarfac MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR 1 OF revisarfac PROMPT "Ver Ultima Factura"
+DEFINE BAR 2 OF revisarfac PROMPT "Repetir Factura"
+DEFINE BAR 3 OF revisarfac PROMPT "Anular Factura"
+ON SELECTION BAR 1 OF revisarfac ;
+	DO _1o20yyjb3 ;
+	IN LOCFILE("\VISUAL BANCO\SUPER" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está SUPER?")
+ON SELECTION BAR 2 OF revisarfac do form repfactura
+ON SELECTION BAR 3 OF revisarfac do form elimfactura
+
+DEFINE POPUP utilidades MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR _MST_DIARY OF utilidades PROMPT "Calendario"
+DEFINE BAR _MST_CALCU OF utilidades PROMPT "Calculadora"
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1O20YYJAQ  ON SELECTION BAR 3 OF POPUP ingresos        
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  SUPER.MPR,            Record:    8          
+*       * Called By:  ON SELECTION BAR 3 OF POPUP ingresos        
+*       * Prompt:     Ingresos Varios                             
+*       * Snippet:    1                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1o20yyjaq
+select 15
+use (TempPath+"tempconta.dbf")
+DO FORM INGRE
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1O20YYJAX  ON SELECTION BAR 2 OF POPUP estadístic      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  SUPER.MPR,            Record:   32          
+*       * Called By:  ON SELECTION BAR 2 OF POPUP estadístic      
+*       * Prompt:     Movimientos                                 
+*       * Snippet:    2                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1o20yyjax
+MENUSELE="movimientos"
+DO ESTADIST.PRG
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1O20YYJAY  ON SELECTION BAR 3 OF POPUP estadístic      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  SUPER.MPR,            Record:   33          
+*       * Called By:  ON SELECTION BAR 3 OF POPUP estadístic      
+*       * Prompt:     Morosos                                     
+*       * Snippet:    3                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1o20yyjay
+MENUSELE="morosos"
+DO ESTADIST.PRG
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1O20YYJAZ  ON SELECTION BAR 4 OF POPUP estadístic      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  SUPER.MPR,            Record:   34          
+*       * Called By:  ON SELECTION BAR 4 OF POPUP estadístic      
+*       * Prompt:     Retirados                                   
+*       * Snippet:    4                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1o20yyjaz
+MENUSELE="retirados"
+DO ESTADIST.PRG
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1O20YYJB0  ON SELECTION BAR 5 OF POPUP estadístic      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  SUPER.MPR,            Record:   35          
+*       * Called By:  ON SELECTION BAR 5 OF POPUP estadístic      
+*       * Prompt:     Consultas                                   
+*       * Snippet:    5                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1o20yyjb0
+menusele="consultas"
+do estadist.prg
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1O20YYJB1  ON SELECTION BAR 6 OF POPUP estadístic      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  SUPER.MPR,            Record:   36          
+*       * Called By:  ON SELECTION BAR 6 OF POPUP estadístic      
+*       * Prompt:     Usuarios Inscritos                          
+*       * Snippet:    6                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1o20yyjb1
+menusele="usuarios"
+do estadist.prg
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1O20YYJB2  ON SELECTION BAR 7 OF POPUP estadístic      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  SUPER.MPR,            Record:   37          
+*       * Called By:  ON SELECTION BAR 7 OF POPUP estadístic      
+*       * Prompt:     Libros                                      
+*       * Snippet:    7                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1o20yyjb2
+menusele="libros"
+do estadist.prg
+
+
+*       *********************************************************
+*       *                                                         
+*       * _1O20YYJB3  ON SELECTION BAR 1 OF POPUP revisarfac      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  SUPER.MPR,            Record:   47          
+*       * Called By:  ON SELECTION BAR 1 OF POPUP revisarfac      
+*       * Prompt:     Ver Ultima Factura                          
+*       * Snippet:    8                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _1o20yyjb3
+public xano,xcedula,xnombre,xtotal,xnbauche,nrofactura,NROFACT,FECHAH
+xano=year(date())
+select 13
+use (DatabasesPath+"FACTU.dbf")
+set order to nrofact
+set filter to year(fecha)==xano
+go bottom
+STORE FECHA TO FECHAH
+store nrofact to nrofactura
+	store cedula to xcedula
+	store nbauche to xnbauche
+	STORE USUARIO TO XNOMBRE
+	store totalfact to xtotal
+	
+	select 15
+	use (TempPath+'tempconta.dbf') exclusive
+	delete all
+	pack
+	select 12
+	use (DatabasesPath+"CONTA.dbf")
+	set order to nrofact
+	set filter to year(fecha)==xano
+	seek nrofactura
+	do while NROFACT == NROFACTURA &&.and. date()== fecha
+		store concepto to xconcepto
+		store registro to xregistro
+		store fecha to xfecha
+		store ingreso to xingreso
+		select 15
+		append blank
+		replace concepto with xconcepto
+		replace fecha with xfecha
+		replace monto with xingreso
+		replace registro with xregistro
+		SELECT 12
+		SKIP
+	ENDDO
+	CLOSE DATABASES ALL
+	SELECT 13
+	use (DatabasesPath+"FACTU.dbf")
+	SELECT 15
+	use (TempPath+'tempconta.dbf') exclusive
+	do menú2.mpr
+	DO FORM FACTURA
+	*DO MENÚ1.MPR
+
+
+
